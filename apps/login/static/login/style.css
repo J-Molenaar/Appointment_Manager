@@ -1,0 +1,27 @@
+.wrapper {
+    margin: 0 auto;
+    width: 480px;
+}
+.register form{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.register h2{
+    font-family: verdana;
+    font-size: 120%;
+    border-bottom: 1px solid #525963;
+}
+.login form{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.login h2{
+    font-family: verdana;
+    font-size: 120%;
+    border-bottom: 1px solid #525963;
+}
+input{
+    border-radius: 2px;
+}

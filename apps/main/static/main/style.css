@@ -1,0 +1,30 @@
+.wrapper {
+    margin: 0 auto;
+    width: 550px;
+}
+
+.navigation{
+    border: 1px solid #525963;
+    border-radius: 5px;
+    padding: 10px 0px 10px 170px;
+    margin: 0 20px 0 0;
+}
+.navigation a{
+    margin-right: 70px;
+}
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+h2{
+    font-family: verdana;
+    font-size: 120%;
+    border-bottom: 1px solid #525963;
+}
+
+h1{
+    font-family: verdana;
+}

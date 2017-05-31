@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register/Login</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'login/style.css' %}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="register">
+                <h2>Register New User:</h2>
+                <form class="register" action="/register" method="POST">
+                    {% csrf_token %}
+                    Name: <br> <input type="text" name="name" value="">* Name must be at least 3 characters.<br>
+                    User Name: <br><input type="text" name="user_name" value=""> * User Name must be at least 3 characters.<br>
+                    Password: <br><input type="text" name="password" value=""> * Password must be at least 8 characters.<br>
+                    Confirm Password: <br><input type="text" name="confirm" value=""><br>
+                    Date of Birth:<input type="date" name="hire"></label><br>
+                    <input type="submit" name="" value="Register">
+                </form><br>
+                {% if request.session.error_group %}
+                    {% if messages %}
+                        {% for i in messages %}
+                            <p style="color: red;">{{ i }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endif %}
+            </div>
+            <!-- End registration -->
+            <div class="login">
+                <h2>Returning User:</h2>
+                <form class="login" action="/login" method="post">
+                    {% csrf_token %}
+                    User Name: <br><input type="text" name="user_name"><br>
+                    Password: <br><input type="text" name="password"><br>
+                    <input type="submit" name="submit" value="Login">
+                </form>
+                {% if not request.session.error_group %}
+                    {% if messages %}
+                        {% for i in messages %}
+                            <p style="color: red;">{{ i }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
